@@ -50,7 +50,7 @@ const ResultTab: React.FC<Props> = ({ json }) => {
 
   return (
     <form onSubmit={formSubmitHandler} className={styles.resultTab}>
-      {formHeader && <h3>{formHeader}</h3>}
+      {formHeader && <h1>{formHeader}</h1>}
       <div className={styles.formItems}>{formItems}</div>
       <div className={styles.formButtons}>{formButtons}</div>
     </form>

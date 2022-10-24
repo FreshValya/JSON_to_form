@@ -12,9 +12,26 @@ enum Tabs {
   RESULT = 'result',
 }
 
+const JSON_TEMP = {
+  header: 'Form header',
+  items: [
+    { label: 'Count', type: 'number' },
+    { label: 'Text', type: 'text' },
+    { label: 'Text long', type: 'textarea' },
+    { label: 'Check', type: 'checkbox' },
+    { label: 'Data', type: 'date' },
+    { label: 'Radio', type: 'radio' },
+  ],
+  buttons: [
+    { label: 'Reset', type: 'reset' },
+    { label: 'Submit', type: 'submit' },
+    { label: 'Button', type: 'button' },
+  ],
+} as Json;
+
 const FormGenerator: React.FC = () => {
   const [currentTab, setCurrentTab] = useState<Tabs>(Tabs.CONFIG);
-  const [json, setJson] = useState<Json>('');
+  const [json, setJson] = useState<Json>(JSON_TEMP);
 
   const tabChangeHandler = (tab: Tabs) => {
     setCurrentTab(tab);
@@ -27,7 +44,7 @@ const FormGenerator: React.FC = () => {
 
   const contentArea =
     currentTab === Tabs.CONFIG ? (
-      <ConfigTab onJsonChange={jsonChangeHandler} />
+      <ConfigTab storedJson={json} onJsonSubmit={jsonChangeHandler} />
     ) : (
       <ResultTab json={json} />
     );

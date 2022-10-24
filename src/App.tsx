@@ -1,7 +1,13 @@
 import React from 'react';
 
-function App() {
-  return <div></div>;
-}
+import FormGenerator from './components/FormGenerator/FormGenerator';
+
+const App: React.FC = () => {
+  return (
+    <>
+      <FormGenerator />
+    </>
+  );
+};
 
 export default App;

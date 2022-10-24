@@ -1,0 +1,12 @@
+.inputItem {
+  display: flex;
+  width: 70%;
+
+  label {
+    width: 40%;
+  }
+
+  input {
+    flex-grow: 1;
+  }
+}

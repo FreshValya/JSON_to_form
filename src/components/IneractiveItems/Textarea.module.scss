@@ -1,0 +1,13 @@
+.textareaItem {
+  display: flex;
+  width: 70%;
+
+  label {
+    width: 40%;
+  }
+
+  textarea {
+    resize: vertical;
+    flex-grow: 1;
+  }
+}

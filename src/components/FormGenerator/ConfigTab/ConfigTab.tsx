@@ -33,6 +33,10 @@ const ConfigTab: React.FC<Props> = ({ storedJson, onJsonSubmit }) => {
     let textAreaValue: Json = '';
     try {
       textAreaValue = JSON.parse(textArea);
+      console.log(textAreaValue);
+      if (textAreaValue == null) {
+        throw new Error();
+      }
     } catch (err) {
       setJsonError('Invalid JSON format');
       return;

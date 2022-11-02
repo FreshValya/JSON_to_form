@@ -7,6 +7,7 @@ import Textarea from '../../IneractiveItems/Textarea';
 import { Json } from '../types';
 
 import styles from './ResultTab.module.scss';
+import InputRadio from '../../IneractiveItems/InputRadio';
 
 interface Props {
   json: Json;
@@ -18,6 +19,15 @@ const ResultTab: React.FC<Props> = ({ json }) => {
       ? json.items.map((item) => {
           if (item.type === 'textarea') {
             return <Textarea key={item.label + item.type} label={item.label} />;
+          } else if (item.type === 'radio') {
+            return (
+              <InputRadio
+                key={item.label + item.type}
+                type={item.type}
+                name={item.name}
+                label={item.label}
+              />
+            );
           } else {
             return (
               <Input

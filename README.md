@@ -1,6 +1,6 @@
 # json_to_form
 
-Test task for Veeam by Valerii Trubin :)
+Transform parsed JSON to form
 
 ## Preparation
 
@@ -9,6 +9,6 @@ Test task for Veeam by Valerii Trubin :)
 
 ## Guide
 
- 1. Configuration format: {items: {label: string, type: 'number' | 'text' | 'textarea' | 'checkbox' | 'date' | 'radio'}[], buttons: {label: string, type: 'reset' | 'submit' | 'button'}[], header?: string}
+ 1. Configuration format: {items: {label: string, type: 'number' | 'text' | 'textarea' | 'checkbox' | 'date' | 'radio', name?: string}[], buttons: {label: string, type: 'reset' | 'submit' | 'button'}[], header?: string}
  2. header is optional
  3. by default set max configuration format

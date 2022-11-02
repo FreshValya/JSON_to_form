@@ -3,6 +3,7 @@ import React from 'react';
 interface InputAttributes {
   label: string;
   type: React.HTMLInputTypeAttribute;
+  name?: string;
 }
 
 interface ButtonAttributes {

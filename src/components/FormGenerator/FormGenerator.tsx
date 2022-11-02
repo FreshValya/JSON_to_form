@@ -20,7 +20,8 @@ const JSON_TEMP = {
     { label: 'Text long', type: 'textarea' },
     { label: 'Check', type: 'checkbox' },
     { label: 'Data', type: 'date' },
-    { label: 'Radio', type: 'radio' },
+    { name: 'rGroup', label: 'Radio', type: 'radio' },
+    { name: 'rGroup', label: 'Radio2', type: 'radio' },
   ],
   buttons: [
     { label: 'Reset', type: 'reset' },
